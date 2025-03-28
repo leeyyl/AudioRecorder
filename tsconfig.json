@@ -1,7 +1,13 @@
 {
   "extends": "expo/tsconfig.base",
-  "jsx": "react",
   "compilerOptions": {
-    "strict": true
-  }
+    "strict": true,
+    "strictNullChecks": true,
+     //  Path Alias
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx", "env.d.ts", "app/(auth)/sign-up", "app/(auth)/sign-in"]
 }
